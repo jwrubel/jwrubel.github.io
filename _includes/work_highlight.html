@@ -1,0 +1,29 @@
+<div class="ui card">
+  <div class="content">
+    <div class="header">{{ card.position }}</div>
+    <h4 class="ui sub header">{{ card.company }}</h4>
+    <div class="meta">
+      <span class="location">
+        <i class="marker icon"></i>
+        {{ card.location }}
+      </span>
+      <span class="right floated time">{{ card.duration }}</span>
+    </div>
+  </div>
+  <div class="content">
+    <div class="description">
+      <p>{{ card.summary }}</p>
+      <h6 class="ui horizontal divider header">
+        <i class="empty star icon"></i>
+        Highlights
+      </h6>
+      <div class="ui bulleted list">
+        {% for highlight in card.highlights %}
+        <div class="item">
+          {{ highlight.item }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
