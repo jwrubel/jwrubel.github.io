@@ -24,13 +24,16 @@
           <i class="teal building outline icon"></i>
           Work History
         </h4>
-        <div class="row">
-          <div class="ui one cards">
-            {% for card in site.posts reversed %}
-              {% include work.html %}
-            {% endfor %}
+        {% for card in site.posts reversed %}
+          <div class="row">
+            {% if card.highlight %}
+              <div class="ui one cards">
+            {% else %}
+              <div class="ui two cards">
+            {% endif %}
+            {% include work.html %}
           </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </body>
