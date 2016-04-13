@@ -13,28 +13,27 @@
   </head>
   <body>
     <div class="ui stackable grid container">
-      <div class="four wide column">
-        {% include sidebar.html %}
-      </div>
-      <div class="twelve wide column">
-        <div class="row">
-          {% include about_me.html %}
+      <div class="row">
+        <div class="four wide column">
+          {% include sidebar.html %}
         </div>
-        <h4 class="ui horizontal divider header">
-          <i class="teal building outline icon"></i>
-          Work History
-        </h4>
-        {% for card in site.posts reversed %}
+        <div class="twelve wide column">
           <div class="row">
-            {% if card.highlight %}
-              <div class="ui one cards">
-            {% else %}
-              <div class="ui two cards">
-            {% endif %}
+            {% include about_me.html %}
+          </div>
+        </div>
+      </div>
+      <h4 class="ui horizontal divider header">
+        <i class="teal building outline icon"></i>
+        Work History
+      </h4>
+      {% for card in site.posts reversed %}
+        <div class="row">
+          <div class="ui one cards">
             {% include work.html %}
           </div>
-        {% endfor %}
-      </div>
+        </div>
+      {% endfor %}
     </div>
   </body>
 </html>
