@@ -21,6 +21,7 @@ github_username:  jekyll
 collections:
   - errata
   - publications
+  - education
   
 # Build settings
 markdown: kramdown
