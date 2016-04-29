@@ -1,4 +1,5 @@
 ---
+order: 6
 company: "Zentropy Partners"
 position: "Sr. Project Manager"
 duration: "February 2000 – October 2000"

@@ -22,6 +22,7 @@ collections:
   - errata
   - publications
   - education
-  
+  - employment
+
 # Build settings
 markdown: kramdown

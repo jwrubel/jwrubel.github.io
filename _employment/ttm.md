@@ -1,4 +1,5 @@
 ---
+order: 1
 company: Think Through Learning Inc
 position: SVP and Chief Technology Officer
 duration: April 2011 – Present
