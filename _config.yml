@@ -20,5 +20,7 @@ github_username:  jekyll
 # collections
 collections:
   - errata
+  - publications
+  
 # Build settings
 markdown: kramdown
