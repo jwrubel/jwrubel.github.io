@@ -7,25 +7,53 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.headline }}">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
     <link href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <title>{{ site.title }}</title>
   </head>
   <body>
-    <div class="ui stackable grid container">
-      <div class="row">
+    {% include menu.html %}
+    <div class="mobile hidden">
+      <div class="ui fixed borderless menu">
+        <div class="item">
+          <div class="ui launch right">
+            <i class="icon teal list layout"></i>
+          </div>
+        </div>
+        <div class="item">
+          <h4 class="ui header">{{ site.name }}</h4>
+        </div>
+        {% include navitems.html %}
+      </div>
+    </div>
+    <div class="mobile only">
+      <div class="ui fixed borderless menu">
+        <div class="item">
+          <div class="ui launch right">
+            <i class="icon teal list layout"></i>
+          </div>
+        </div>
+        <div class="item">
+          <h4 class="ui header">{{ site.name }}</h4>
+        </div>
+      </div>
+    </div>
+    <div class="pusher">
+      <div class="ui stackable grid container" id="content">
         <div class="ten wide column">
           {% include about_me.html %}
         </div>
         <div class="six wide column">
           {% include sidebar.html %}
         </div>
+        {% include employment.html %}
+        {% include education.html %}
+        {% include publications.html %}
+        {% include errata.html %}
       </div>
-      {% include employment.html %}
-      {% include education.html %}
-      {% include publications.html %}
-      {% include errata.html %}
     </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+    <script src="/javascripts/main.js"></script>
   </body>
 </html>
