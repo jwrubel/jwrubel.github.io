@@ -4,8 +4,9 @@
     Download PDF
   </a>
   <div class="ui list">
-    {% assign entries = site.social | sort: 'order' %}
-    {% for entry in entries %}
+    {% assign channels = site.social %}
+    {% for channel in channels %}
+      {% assign entry = channel[1] %}
       <div class="item">
         <i class="{{ entry.icon }} icon"></i>
         {% if entry.href %}

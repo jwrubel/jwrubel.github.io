@@ -17,9 +17,42 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://james.wrubel.org" # the base hostname & protocol for your site
 
+# social
+social:
+  location:
+    icon: marker
+    text: Pittsburgh, PA USA
+  email:
+    icon: mail outline
+    text: jwrubel@gmail.com
+    href: mailto:jwrubel@gmail.com
+  www:
+    icon: linkify
+    text: james.wrubel.org
+    href: http://james.wrubel.org
+  twitter:
+    icon: twitter
+    text: "@jameswrubel"
+    href: https://twitter.com/jameswrubel/
+  github:
+    icon: github
+    text: jwrubel
+    href: https://github.com/jwrubel/
+  linkedin:
+    icon: linkedin
+    text: linkedin.com/in/jwrubel
+    href: https://www.linkedin.com/in/jwrubel/
+  medium:
+    icon: medium
+    text: "@jameswrubel"
+    href: https://medium.com/@jameswrubel/
+  angellist:
+    icon: angellist
+    text: jameswrubel
+    href: https://angel.co/jameswrubel/
+
 # collections
 collections:
-  - social
   - errata
   - publications
   - education
