@@ -15,3 +15,31 @@
     <meta name="twitter:image:alt" content="Photo of {{ site.name }}" />
   {% endif %}
 {% endif %}
+
+{% comment %}
+  Google Social Profile support
+  see: https://developers.google.com/structured-data/customize/social-profiles
+  validate at:
+  https://developers.google.com/structured-data/testing-tool/
+{% endcomment %}
+
+{% if site.social %}
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Person",
+    "name" : "{{ site.name }}",
+    "url" : "{{ site.url }}",
+    "sameAs" : [
+      {% for channel in site.social %}
+        {% if channel[1].href %}
+          "{{ channel[1].href}}"
+          {% unless forloop.last %}
+            ,
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    ]
+  }
+  </script>
+{% endif %}
