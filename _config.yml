@@ -18,6 +18,9 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://james.wrubel.org" # the base hostname & protocol for your site
 
+# analytics
+analytics:
+  tracking_id: UA-77429880-1
 # social
 social:
   location:
