@@ -7,7 +7,8 @@
 
 # Site settings
 title: CV for James Wrubel
-name: James Wrubel
+given_name: James
+family_name: Wrubel
 headshot: jwrubel_hs.jpg
 pdf: jwrubel.pdf
 headline: >
