@@ -1,0 +1,10 @@
+{% if site.social.twitter %}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="{{ site.social.twitter.text }}" />
+  <meta name="twitter:title" content="{{ site.name }}" />
+  <meta name="twitter:description" content="{{ site.headline }}" />
+  {% if site.headshot && site.url %}
+    <meta name="twitter:image" content="{{ site.headshot | prepend: "/images/" | prepend: site.url }}" />
+    <meta name="twitter:image:alt" content="Photo of {{ site.name }}" />
+  {% endif %}
+{% endif %}
