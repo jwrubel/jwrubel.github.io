@@ -60,7 +60,11 @@ collections:
   - errata
   - publications
   - education
+  - skills
   - employment
+
+# layout settings
+skill_rating_max: 3
 
 # Build settings
 markdown: kramdown
