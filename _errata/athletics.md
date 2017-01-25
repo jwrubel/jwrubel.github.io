@@ -20,10 +20,10 @@ title: "Athletics"
       <img class="ui mini image" src="/images/ironman_logo.png">
     </div>
     <div class="header">
-      2x <a href="http://ironman.com/" target="_blank">Ironman</a> finisher
+      3x <a href="http://ironman.com/" target="_blank">Ironman</a> finisher
     </div>
     <div class="description">
-      Ironman Coeur d'Alene, Ironman Mont Tremblant
+      Ironman Coeur d'Alene, Ironman Mont Tremblant, Ironman Lake Placid
     </div>
   </div>
   <div class="item">
