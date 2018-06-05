@@ -1,8 +1,8 @@
 ---
-order: 1
+order: 2
 company: Think Through Learning Inc
 position: SVP and Chief Technology Officer
-duration: April 2011 – Present
+duration: April 2011 – February 2017
 location: Pittsburgh, PA USA
 summary: >
   Partnering with the executive team, grew TTL from <strong>$5MM to $20+MM in annual revenue</strong>. Rebuilt the company's entire product platform to support <strong>growth in usage from 150,000 students per year to 3.3 million students</strong> doing over a billion math problems per year (<strong>roughly the same size as Khan Academy</strong>). In October 2016, Think Through Learning was <strong>acquired by <a href="https://www.imaginelearning.com" target="_blank">Imagine Learning</a></strong>.

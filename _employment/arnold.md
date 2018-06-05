@@ -1,5 +1,5 @@
 ---
-order: 3
+order: 4
 company: "Arnold Worldwide"
 position: "Solutions Architect"
 duration: "October 2002 - August 2003"

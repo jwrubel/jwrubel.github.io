@@ -1,5 +1,5 @@
 ---
-order: 5
+order: 6
 company: "BiT Group, Inc"
 position: "Sr. Project Manager"
 duration: "October 2000 – October 2001"

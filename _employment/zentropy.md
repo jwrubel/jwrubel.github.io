@@ -1,5 +1,5 @@
 ---
-order: 6
+order: 7
 company: "Zentropy Partners"
 position: "Sr. Project Manager"
 duration: "February 2000 – October 2000"
