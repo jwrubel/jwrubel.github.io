@@ -1,7 +1,7 @@
 ---
 order: 1
 company: Learning Tapestry
-position: SVP and Chief Technology Officer
+position: Consulting CTO
 duration: May 2017 – Present
 location: Remote
 summary: >
