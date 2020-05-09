@@ -1,5 +1,5 @@
 ---
-order: 3
+order: 4
 company: Software Engineering Institute at Carnegie Mellon University
 position: Technical Manager, Immersive Learning
 duration: January 2004 - March 2011

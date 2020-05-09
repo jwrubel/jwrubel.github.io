@@ -1,5 +1,5 @@
 ---
-order: 8
+order: 9
 company: "GTE Internetworking, Powered by BBN (now Level3)"
 position: "Operations Manager, E-business Engineering"
 duration: "October 1997 – February 2000"

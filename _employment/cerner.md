@@ -1,5 +1,5 @@
 ---
-order: 9
+order: 10
 company: "Cerner Corporation"
 position: "Senior Application Specialist"
 duration: "June 1995 – October 1997"

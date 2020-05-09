@@ -1,8 +1,8 @@
 ---
-order: 1
+order: 2
 company: Learning Tapestry
 position: Consulting CTO
-duration: May 2017 – Present
+duration: May 2017 – August 2019
 location: Remote
 summary: >
   On-demand CTO for universities, institutions, and startups in the education space. I help organizations build internal capability in technology, product management strategy, security, and data privacy.
