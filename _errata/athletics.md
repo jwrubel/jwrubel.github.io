@@ -2,6 +2,7 @@
 category: "Interests"
 icon: "red bicycle"
 title: "Athletics"
+order: 8
 ---
 <div class="ui bulleted link list">
   <div class="item">

@@ -14,10 +14,9 @@ pdf: jwrubel.pdf
 headline: >
   I'm an entrepreneurially-minded leader with 20+ years building, launching, and scaling technology businesses, mainly in deep learning (AI & machine learning), ed tech, and cybersecurity.
 description: >
-  I'm uniquely experienced in rallying Software Development, UX, Product Management, Data Science, DevOps, Customer Service, and Digital Marketing teams toward business objectives, and I'm equally comfortable at the command line and the board room. As a leader I have a passion for creating environments that foster diversity, creativity, learning and growth.
-
+  I bring a strong technical perspective to business challenges (and vice versa), and I'm uniquely experienced in rallying Sales & Marketing, Software Engineering, UX, Product Management, Data Science, DevOps, and Customer Service teams toward business objectives. As a leader I have a passion for creating environments that foster diversity, creativity, learning and growth.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://james.wrubel.org" # the base hostname & protocol for your site
+url: "https://james.wrubel.org" # the base hostname & protocol for your site
 
 # analytics
 analytics:
@@ -47,14 +46,6 @@ social:
     icon: linkedin
     text: linkedin.com/in/jwrubel
     href: https://www.linkedin.com/in/jwrubel/
-  medium:
-    icon: medium
-    text: "@jameswrubel"
-    href: https://medium.com/@jameswrubel/
-  angellist:
-    icon: angellist
-    text: jameswrubel
-    href: https://angel.co/jameswrubel/
 
 # collections
 collections:

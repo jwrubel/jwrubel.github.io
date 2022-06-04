@@ -5,7 +5,8 @@
 <a name="misc"></a>
 <div class="row">
   <div class="ui three stackable cards">
-    {% for entry in site.errata %}
+    {% assign entries = site.errata | sort: 'order' %}
+    {% for entry in entries %}
       <div class="ui card">
         <div class="content">
           <i class="right floated {{ entry.icon }} icon"></i>
