@@ -46,6 +46,10 @@ social:
     icon: linkedin
     text: linkedin.com/in/jwrubel
     href: https://www.linkedin.com/in/jwrubel/
+  mastodon:
+    icon: edit outline
+    text: Mastodon
+    href: https://capitalism.wtf/@omg
 
 # collections
 collections:
@@ -54,9 +58,6 @@ collections:
   - education
   - skills
   - employment
-
-gems:
-  - jekyll-assets
 
 # layout settings
 skill_rating_max: 3
