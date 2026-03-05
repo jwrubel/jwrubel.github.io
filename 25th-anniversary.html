@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Eileen & Jim's 25th Anniversary: 18 March 2026</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cream: #f8f6f1;
+        --deep-navy: #1a2332;
+        --warm-gold: #c9a961;
+        --soft-silver: #b8b8b8;
+        --accent-teal: #4a6b6b;
+        --shadow: rgba(26, 35, 50, 0.15);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Lora', serif;
+        background: linear-gradient(
+          135deg,
+          var(--cream) 0%,
+          #ebe8df 100%
+        );
+        color: var(--deep-navy);
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      .grain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: 0.03;
+        z-index: 1000;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 30px;
+        position: relative;
+        z-index: 1;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 70px;
+        opacity: 0;
+        animation: fadeIn 1.2s ease-out 0.3s forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 300;
+        letter-spacing: 0.02em;
+        color: var(--deep-navy);
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+
+      .subtitle {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(1.3rem, 3vw, 1.8rem);
+        font-weight: 400;
+        font-style: italic;
+        color: var(--accent-teal);
+        margin-bottom: 10px;
+      }
+
+      .date {
+        font-size: 0.95rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--soft-silver);
+        margin-top: 20px;
+      }
+
+      .divider {
+        width: 80px;
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          var(--warm-gold),
+          transparent
+        );
+        margin: 40px auto;
+      }
+
+      .coin-display {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin: 60px 0;
+        opacity: 0;
+        animation: fadeIn 1.2s ease-out 0.6s forwards;
+      }
+
+      @media (max-width: 768px) {
+        .coin-display {
+          grid-template-columns: 1fr;
+          gap: 50px;
+        }
+      }
+
+      .coin-side {
+        text-align: center;
+        position: relative;
+      }
+
+      .coin-image-wrapper {
+        position: relative;
+        display: inline-block;
+        padding: 20px;
+        background: white;
+        border-radius: 50%;
+        box-shadow:
+          0 10px 40px var(--shadow),
+          inset 0 0 0 1px rgba(201, 169, 97, 0.2);
+        transition:
+          transform 0.5s ease,
+          box-shadow 0.5s ease;
+      }
+
+      .coin-image-wrapper:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow:
+          0 20px 60px var(--shadow),
+          inset 0 0 0 1px rgba(201, 169, 97, 0.4);
+      }
+
+      .coin-image-wrapper::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        border-radius: 50%;
+        border: 1px solid var(--warm-gold);
+        opacity: 0.3;
+      }
+
+      .coin-image {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        border-radius: 50%;
+        display: block;
+      }
+
+      .coin-label {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--accent-teal);
+        margin-top: 25px;
+      }
+
+      .story-section {
+        background: white;
+        padding: 50px 45px;
+        margin: 60px 0;
+        border-radius: 2px;
+        box-shadow: 0 8px 30px var(--shadow);
+        position: relative;
+        opacity: 0;
+        animation: fadeIn 1.2s ease-out 0.9s forwards;
+      }
+
+      .story-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          var(--warm-gold),
+          var(--accent-teal)
+        );
+      }
+
+      .story-section h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2rem;
+        font-weight: 400;
+        color: var(--deep-navy);
+        margin-bottom: 30px;
+        letter-spacing: 0.01em;
+      }
+
+      .story-section h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--accent-teal);
+        margin: 35px 0 15px;
+        letter-spacing: 0.02em;
+      }
+
+      .story-section p {
+        font-size: 1.05rem;
+        margin-bottom: 20px;
+        color: #3a3a3a;
+      }
+
+      .story-section em {
+        color: var(--accent-teal);
+        font-style: italic;
+      }
+
+      .highlight-box {
+        background: linear-gradient(135deg, #faf9f6 0%, #f5f3ed 100%);
+        border-left: 3px solid var(--warm-gold);
+        padding: 25px 30px;
+        margin: 30px 0;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .highlight-box p {
+        margin-bottom: 0;
+        font-style: italic;
+        color: var(--deep-navy);
+      }
+
+      .technical-specs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
+      }
+
+      .spec-item {
+        padding: 15px;
+        background: rgba(201, 169, 97, 0.08);
+        border-radius: 2px;
+        border-left: 2px solid var(--warm-gold);
+      }
+
+      .spec-label {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--soft-silver);
+        margin-bottom: 5px;
+      }
+
+      .spec-value {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--deep-navy);
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 80px;
+        padding-top: 40px;
+        border-top: 1px solid rgba(26, 35, 50, 0.1);
+        opacity: 0;
+        animation: fadeIn 1.2s ease-out 1.2s forwards;
+      }
+
+      .anniversary-emblem {
+        display: inline-block;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 3rem;
+        font-weight: 300;
+        color: var(--warm-gold);
+        margin-bottom: 15px;
+        text-shadow: 0 2px 10px rgba(201, 169, 97, 0.3);
+      }
+
+      footer p {
+        font-size: 0.95rem;
+        color: var(--soft-silver);
+        margin-top: 10px;
+      }
+
+      .ornament {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin: 20px auto;
+        background: radial-gradient(
+          circle,
+          var(--warm-gold) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        opacity: 0.4;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 40px 20px;
+        }
+
+        .story-section {
+          padding: 35px 25px;
+        }
+
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        .subtitle {
+          font-size: 1.3rem;
+        }
+      }
+
+      /* Subtle parallax effect on scroll */
+      @media (prefers-reduced-motion: no-preference) {
+        .coin-image-wrapper {
+          transition: transform 0.3s ease-out;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grain"></div>
+
+    <div class="container">
+      <header>
+        <h1>Eileen & Jim's 25th Anniversary</h1>
+        <div class="subtitle">18 March 2026</div>
+      </header>
+
+      <div class="coin-display">
+        <div class="coin-side">
+          <div class="coin-image-wrapper">
+            <img
+              src="IMG_5488.jpg"
+              alt="Vladimir Dal Commemorative Coin - Obverse"
+              class="coin-image"
+            />
+          </div>
+          <div class="coin-label">Obverse</div>
+        </div>
+        <div class="coin-side">
+          <div class="coin-image-wrapper">
+            <img
+              src="IMG_5489.jpg"
+              alt="Vladimir Dal Commemorative Coin - Reverse"
+              class="coin-image"
+            />
+          </div>
+          <div class="coin-label">Reverse</div>
+        </div>
+      </div>
+
+      <div class="story-section">
+        <h2>About this coin</h2>
+
+        <p>
+          What better way to celebrate 25 years of being two Wrubels
+          than with a silver 2 ruble coin?
+        </p>
+
+        <div class="highlight-box">
+          <p>
+            This coin was minted in 2001, as part of a limited series
+            featuring notable Russian figures. This coin is #225 of
+            the pressing, though we don't know how many total were
+            minted.
+          </p>
+        </div>
+
+        <h3>Vladimir Ivanovich Dal (1801-1872)</h3>
+
+        <p>
+          The coin honors Vladimir Dal, one of Russia's most
+          remarkable cultural figures. A lexicographer, writer, and
+          physician, Dal devoted 53 years of his life to creating the
+          monumental
+          <em
+            >"Explanatory Dictionary of the Living Great Russian
+            Language"</em
+          >
+          (Толковый словарь живого великорусского языка).
+        </p>
+
+        <p>
+          His dictionary contained over 200,000 words and captured the
+          richness and diversity of the Russian language as it was
+          actually spoken by people across the vast empire. It remains
+          one of the most comprehensive and beloved dictionaries of
+          Russian, still referenced by scholars and language lovers
+          today.
+        </p>
+
+        <p>
+          The obverse of the coin depicts Dal with his famous
+          dictionary, accompanied by small figures representing the
+          Russian people whose living language he so faithfully
+          documented.
+        </p>
+
+        <h3>The Coin Inscriptions</h3>
+
+        <p><strong>Obverse (Dal side):</strong></p>
+        <ul style="margin-left: 30px; margin-bottom: 20px">
+          <li style="margin-bottom: 8px">
+            <em>"Толковый словарь живаго великорускаго языка"</em> —
+            "Explanatory Dictionary of the Living Great Russian
+            Language"
+          </li>
+          <li style="margin-bottom: 8px">
+            <em>"В. Даль"</em> — Dal's signature
+          </li>
+          <li style="margin-bottom: 8px">1801-1872 — His lifespan</li>
+        </ul>
+
+        <p><strong>Reverse (Eagle side):</strong></p>
+        <ul style="margin-left: 30px; margin-bottom: 20px">
+          <li style="margin-bottom: 8px">
+            <em>"Два рубля"</em> — "Two Rubles"
+          </li>
+          <li style="margin-bottom: 8px">
+            <em>"Банк России"</em> — "Bank of Russia"
+          </li>
+          <li style="margin-bottom: 8px">
+            2001г. — Year of minting (our wedding year!)
+          </li>
+        </ul>
+
+        <div class="technical-specs">
+          <div class="spec-item">
+            <div class="spec-label">Metal</div>
+            <div class="spec-value">Sterling Silver</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Purity</div>
+            <div class="spec-value">92.5% (Ag 925)</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Weight</div>
+            <div class="spec-value">15.55 grams</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Year</div>
+            <div class="spec-value">2001</div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="ornament"></div>
+        <div class="anniversary-emblem">XXV</div>
+        <p>Twenty-Five Years of adventures and memories</p>
+        <p style="margin-top: 30px; font-size: 0.85rem">
+          March 18, 2001 - March 18, 2026
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      // Add subtle parallax effect on scroll for coin images
+      if (
+        window.matchMedia('(prefers-reduced-motion: no-preference)')
+          .matches
+      ) {
+        window.addEventListener('scroll', () => {
+          const scrolled = window.pageYOffset
+          const coins = document.querySelectorAll(
+            '.coin-image-wrapper',
+          )
+
+          coins.forEach((coin, index) => {
+            const speed = 0.05
+            const offset = index % 2 === 0 ? 1 : -1
+            coin.style.transform = `translateY(${scrolled * speed * offset}px)`
+          })
+        })
+      }
+
+      // Add hover effect that reveals more details
+      const coinWrappers = document.querySelectorAll(
+        '.coin-image-wrapper',
+      )
+      coinWrappers.forEach((wrapper) => {
+        wrapper.addEventListener('mouseenter', function () {
+          this.style.transform = 'scale(1.05) translateY(-8px)'
+        })
+
+        wrapper.addEventListener('mouseleave', function () {
+          this.style.transform = 'scale(1) translateY(0)'
+        })
+      })
+    </script>
+  </body>
+</html>
